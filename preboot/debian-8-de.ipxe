@@ -1,6 +1,6 @@
 #!ipxe
 
-set distribution stretch
+set distribution jessie
 set base_url  http://httpredir.debian.org/debian/dists/${distribution}/main
 set netboot_base https://raw.githubusercontent.com/Virtomize/IPXE-Data/master/
 
