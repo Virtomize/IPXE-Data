@@ -1,4 +1,0 @@
- #!ipxe
-  
-  dhcp
-  chain REPLACE_WITH_NEXT

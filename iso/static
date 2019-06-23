@@ -1,4 +1,0 @@
-#!ipxe
-  
-set net0/ip 192.168.0.100
-chain REPLACE_WITH_NEXT
