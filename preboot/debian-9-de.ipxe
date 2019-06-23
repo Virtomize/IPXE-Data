@@ -1,0 +1,13 @@
+#!ipxe
+
+set distribution stretch
+set base_url  http://httpredir.debian.org/debian/dists/${distribution}/main
+set netboot_base https://raw.githubusercontent.com/Virtomize/IPXE-Data/master/
+
+set preseed preseed/url=${netboot_base}/preseed/debian-9-de.cfg
+set boot_params debian-installer=en_US auto priority=critical locale=en_US kbd-chooser/method=de keyboard-configuration/xkb-keymap=de console-keymaps-at/keymap=de debconf/frontend=noninteractive
+
+kernel ${base_url}/installer-amd64/current/images/netboot/debian-installer/amd64/linux ${preseed} ${boot_params}
+initrd ${base_url}/installer-amd64/current/images/netboot/debian-installer/amd64/initrd.gz
+
+boot
