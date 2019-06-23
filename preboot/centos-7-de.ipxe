@@ -1,0 +1,11 @@
+#!ipxe
+
+set base_url http://mirror.centos.org/centos-7/7/os/x86_64
+set netboot_base https://raw.githubusercontent.com/Virtomize/IPXE-Data/master/
+
+set preseed preseed/url=${netboot_base}/preseed/centos-7-de.cfg
+
+kernel ${base_url}/images/pxeboot/vmlinuz ks=${netboot_base} ${preseed}
+initrd ${base}/images/pxeboot/initrd.img
+
+boot
