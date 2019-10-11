@@ -1,0 +1,11 @@
+#!ipxe
+
+set base_url http://mirror.centos.org/centos-8/8/BaseOS/x86_64/
+set netboot_base https://raw.githubusercontent.com/Virtomize/IPXE-Data/master
+
+set preseed ${netboot_base}/preseed/centos-8.cfg
+
+kernel ${base_url}/images/pxeboot/vmlinuz ks=${preseed}
+initrd ${base_url}/images/pxeboot/initrd.img
+
+boot
