@@ -1,7 +1,7 @@
 #!ipxe
 
 set distribution buster
-set base_url  http://httpredir.debian.org/debian/dists/${distribution}/main
+set base_url  http://deb.debian.org/debian/dists/${distribution}/main
 set netboot_base https://raw.githubusercontent.com/Virtomize/IPXE-Data/master/
 
 set preseed preseed/url=${netboot_base}/preseed/debian-10-de.cfg
